@@ -14,6 +14,13 @@ public interface CloudComplianceService {
     void authenticate(CloudAccount account);
 
     Map<String, Object> scanResource(String resourceId, String resourceType, ComplianceRule rule);
+
+    void authenticate(CloudAccount account);
+
+    void authenticate(CloudAccount account);
+
+    Map<String, Object> scanResource(String resourceId, String resourceType, ComplianceRule rule);
+
     List<Map<String, Object>> listResources(String resourceType);
     List<Finding> evaluateCompliance(CloudAccount account, List<ComplianceRule> rules);
 

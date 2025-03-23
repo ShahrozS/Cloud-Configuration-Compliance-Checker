@@ -2,7 +2,7 @@ package com.shahrozz.demo.DataRepositories;
 
 import com.shahrozz.demo.DomainModels.CloudAccount;
 import com.shahrozz.demo.DomainModels.ComplianceStandard;
-import org.hibernate.boot.archive.scan.spi.ScanResult;
+import com.shahrozz.demo.DomainModels.ScanResult;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;

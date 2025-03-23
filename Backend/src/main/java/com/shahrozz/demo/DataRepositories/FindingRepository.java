@@ -2,8 +2,8 @@ package com.shahrozz.demo.DataRepositories;
 
 
 import com.shahrozz.demo.DomainModels.Finding;
+import com.shahrozz.demo.DomainModels.ScanResult;
 import com.shahrozz.demo.DomainModels.SeverityLevel;
-import org.hibernate.boot.archive.scan.spi.ScanResult;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
