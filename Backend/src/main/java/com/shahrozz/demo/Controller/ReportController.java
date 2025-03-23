@@ -1,4 +1,4 @@
-package com.shahrozz.demo.Controllers;
+package com.shahrozz.demo.Controller;
 
 import com.shahrozz.demo.Report.ReportService;
 import lombok.RequiredArgsConstructor;
