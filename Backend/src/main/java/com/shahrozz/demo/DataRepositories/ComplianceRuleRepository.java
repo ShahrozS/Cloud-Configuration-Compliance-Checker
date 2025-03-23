@@ -1,7 +1,7 @@
 package com.shahrozz.demo.DataRepositories;
 
-import com.shahrozz.demo.ComplianceEngine.ComplianceRule;
 import com.shahrozz.demo.DomainModels.CloudProvider;
+import com.shahrozz.demo.DomainModels.ComplianceRule;
 import com.shahrozz.demo.DomainModels.ComplianceStandard;
 import org.springframework.data.jpa.repository.JpaRepository;
 
