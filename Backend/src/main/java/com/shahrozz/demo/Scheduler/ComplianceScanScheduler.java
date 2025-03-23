@@ -25,7 +25,7 @@ public class ComplianceScanScheduler {
 
         List<CloudAccount> activeAccounts = cloudAccountRepository.findByActive(true);
 
-        for (CloudAccount account : activeAccounts) {
+        for (CloudAccount account :  activeAccounts) {
             try {
                 ScanRequestDto scanRequest = new ScanRequestDto();
                 scanRequest.setAccountId(account.getId());
