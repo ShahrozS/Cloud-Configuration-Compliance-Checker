@@ -1,8 +1,10 @@
 package com.shahrozz.demo.Services;
 
-import com.shahrozz.demo.ComplianceEngine.ComplianceRule;
 import com.shahrozz.demo.DTOs.ComplianceRuleDto;
 import com.shahrozz.demo.DataRepositories.ComplianceRuleRepository;
+import com.shahrozz.demo.DomainModels.CloudProvider;
+import com.shahrozz.demo.DomainModels.ComplianceRule;
+import com.shahrozz.demo.DomainModels.ComplianceStandard;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -54,10 +56,10 @@ public class ComplianceRuleService {
         ComplianceRule existingRule = complianceRuleRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Rule not found with id: " + id));
 
-        existingRule.setId(ruleDto.getRuleId());
+        existingRule.setId(ruleDto.getId());
         existingRule.setTitle(ruleDto.getTitle());
         existingRule.setDescription(ruleDto.getDescription());
-        existingRule.setSeverity(ruleDto.getSeverityLevel());
+        existingRule.setSeverityLevel(ruleDto.getSeverityLevel());
         existingRule.setCloudProvider(ruleDto.getCloudProvider());
 
         ComplianceRule updatedRule = complianceRuleRepository.save(existingRule);
@@ -71,10 +73,10 @@ public class ComplianceRuleService {
     private ComplianceRuleDto convertToDto(ComplianceRule rule) {
         ComplianceRuleDto dto = new ComplianceRuleDto();
         dto.setId(rule.getId());
-        dto.setRuleId(rule.getId());
+        dto.setRuleId(rule.getRuleId());
         dto.setTitle(rule.getTitle());
         dto.setDescription(rule.getDescription());
-        dto.setSeverityLevel(rule.getSeverity());
+        dto.setSeverityLevel(rule.getSeverityLevel());
         dto.setStandard(rule.getStandard());
         dto.setCloudProvider(rule.getCloudProvider());
         dto.setRemediationSteps(rule.getRemediationSteps());

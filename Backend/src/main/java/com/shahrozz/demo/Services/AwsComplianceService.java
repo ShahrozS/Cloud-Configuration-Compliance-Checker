@@ -1,19 +1,19 @@
 package com.shahrozz.demo.Services;
 
-import com.shahrozz.demo.ComplianceEngine.ComplianceRule;
 import com.shahrozz.demo.DomainModels.CloudAccount;
+import com.shahrozz.demo.DomainModels.ComplianceRule;
 import com.shahrozz.demo.DomainModels.Finding;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
-public abstract class AwsComplianceService implements CloudComplianceService {
+public  class AwsComplianceService implements CloudComplianceService {
     @Override
     public void authenticate(CloudAccount account) {
         // In a real implementation, this would use AWS SDK to authenticate
         // For example:
-        /*
+        /*CloudProviderFactory
         BasicAWSCredentials awsCredentials = new BasicAWSCredentials(
             account.getAccessKeyId(),
             account.getSecretAccessKey()

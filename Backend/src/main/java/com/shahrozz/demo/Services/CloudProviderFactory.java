@@ -1,5 +1,7 @@
 package com.shahrozz.demo.Services;
 
+import com.shahrozz.demo.DomainModels.CloudAccount;
+import com.shahrozz.demo.DomainModels.CloudProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

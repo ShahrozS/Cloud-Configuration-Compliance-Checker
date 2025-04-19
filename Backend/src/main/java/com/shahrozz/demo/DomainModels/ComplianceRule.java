@@ -2,11 +2,15 @@ package com.shahrozz.demo.DomainModels;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Data
 @NoArgsConstructor
+@Getter
+@Setter
 public class ComplianceRule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +35,6 @@ public class ComplianceRule {
     private String remediationSteps;
 
     private String resourceType;
+
+
 }

@@ -72,10 +72,11 @@
 			<version>2.2.6.RELEASE</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.azure.spring/spring-cloud-azure-autoconfigure -->
 		<dependency>
 			<groupId>com.azure.spring</groupId>
 			<artifactId>spring-cloud-azure-autoconfigure</artifactId>
-			<version>5.10.0</version>
+			<version>5.22.0</version>
 		</dependency>
 
 		<!-- Cloud SDKs -->

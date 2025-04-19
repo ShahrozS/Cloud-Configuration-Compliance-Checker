@@ -1,6 +1,5 @@
 package com.shahrozz.demo.Scanner;
 
-import com.shahrozz.demo.ComplianceEngine.ComplianceRule;
 import com.shahrozz.demo.DTOs.FindingDto;
 import com.shahrozz.demo.DTOs.ScanRequestDto;
 import com.shahrozz.demo.DTOs.ScanResultDto;
@@ -8,10 +7,7 @@ import com.shahrozz.demo.DataRepositories.CloudAccountRepository;
 import com.shahrozz.demo.DataRepositories.ComplianceRuleRepository;
 import com.shahrozz.demo.DataRepositories.FindingRepository;
 import com.shahrozz.demo.DataRepositories.ScanResultRepository;
-import com.shahrozz.demo.DomainModels.CloudAccount;
-import com.shahrozz.demo.DomainModels.Finding;
-import com.shahrozz.demo.DomainModels.ScanResult;
-import com.shahrozz.demo.DomainModels.SeverityLevel;
+import com.shahrozz.demo.DomainModels.*;
 import com.shahrozz.demo.Services.CloudComplianceService;
 import com.shahrozz.demo.Services.CloudProviderFactory;
 import lombok.RequiredArgsConstructor;

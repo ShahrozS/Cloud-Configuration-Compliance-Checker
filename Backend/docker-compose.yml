@@ -1,0 +1,38 @@
+# docker-compose.yml
+
+services:
+  postgres:
+    container_name: postgres-sql-uc
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: c4_db
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - c4-network
+
+  app:
+    build: .
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/c4_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8080:8080"
+    networks:
+      - c4-network
+
+networks:
+  c4-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

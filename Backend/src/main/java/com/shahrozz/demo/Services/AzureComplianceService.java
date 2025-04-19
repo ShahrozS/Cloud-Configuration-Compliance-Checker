@@ -1,7 +1,7 @@
 package com.shahrozz.demo.Services;
 
-import com.shahrozz.demo.ComplianceEngine.ComplianceRule;
 import com.shahrozz.demo.DomainModels.CloudAccount;
+import com.shahrozz.demo.DomainModels.ComplianceRule;
 import com.shahrozz.demo.DomainModels.Finding;
 import org.springframework.stereotype.Service;
 
