@@ -7,7 +7,6 @@ import lombok.Data;
 
 @Data
 public class CloudAccountDto {
-    private Long id;
 
     @NotBlank(message = "Account name is required")
     private String accountName;

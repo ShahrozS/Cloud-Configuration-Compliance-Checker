@@ -66,13 +66,13 @@ public class ScanService {
         // Count findings by severity and compliance
         int compliantCount = 0;
         int nonCompliantCount = 0;
-        Map<SeverityLevel, Integer> severityCounts = Map.of(
+        Map<SeverityLevel, Integer> severityCounts = new java.util.HashMap<>(Map.of(
                 SeverityLevel.CRITICAL, 0,
                 SeverityLevel.HIGH, 0,
                 SeverityLevel.MEDIUM, 0,
                 SeverityLevel.LOW, 0,
                 SeverityLevel.INFO, 0
-        );
+        ));
 
         for (Finding finding : findings) {
             if (finding.isCompliant()) {

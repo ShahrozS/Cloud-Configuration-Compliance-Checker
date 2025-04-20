@@ -23,6 +23,7 @@ public class ScheduledScanService {
 
     // Run every day at midnight
     @Scheduled(cron = "0 0 0 * * ?")
+//    @Scheduled(cron = "*/10 * * * * ?")
     public void performDailyScans() {
         log.info("Starting scheduled daily compliance scans");
 
@@ -33,9 +34,9 @@ public class ScheduledScanService {
                 log.info("Starting scan for account: {} ({})", account.getAccountName(), account.getAccountId());
 
                 ScanRequestDto scanRequest = new ScanRequestDto();
+                System.out.println("Account id  = " + account.getId() );
                 scanRequest.setAccountId(account.getId());
                 scanRequest.setStandard(ComplianceStandard.CIS_BENCHMARK); // Default to CIS Benchmark
-
                 scanService.performScan(scanRequest);
 
                 log.info("Completed scan for account: {}", account.getAccountName());

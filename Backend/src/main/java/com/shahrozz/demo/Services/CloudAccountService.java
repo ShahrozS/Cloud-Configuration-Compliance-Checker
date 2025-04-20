@@ -29,6 +29,7 @@ public class CloudAccountService {
     public CloudAccountDto createAccount(CloudAccountDto accountDto) {
         CloudAccount account = convertToEntity(accountDto);
         CloudAccount savedAccount = cloudAccountRepository.save(account);
+        System.out.println("Created account: "  + savedAccount.toString());
         return convertToDto(savedAccount);
     }
 
@@ -54,7 +55,6 @@ public class CloudAccountService {
 
     private CloudAccountDto convertToDto(CloudAccount account) {
         CloudAccountDto dto = new CloudAccountDto();
-        dto.setId(account.getId());
         dto.setAccountName(account.getAccountName());
         dto.setAccountId(account.getAccountId());
         dto.setProvider(account.getProvider());
@@ -67,7 +67,6 @@ public class CloudAccountService {
 
     private CloudAccount convertToEntity(CloudAccountDto dto) {
         CloudAccount account = new CloudAccount();
-        account.setId(dto.getId());
         account.setAccountName(dto.getAccountName());
         account.setAccountId(dto.getAccountId());
         account.setProvider(dto.getProvider());
